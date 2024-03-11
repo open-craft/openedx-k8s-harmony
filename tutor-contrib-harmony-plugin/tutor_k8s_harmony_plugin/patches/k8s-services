@@ -1,3 +1,4 @@
+{%- if K8S_HARMONY_ENABLE_INGRESS %}
 ---
 # For multi-instance clusters. Allow one central load balancer on the cluster to
 # handle HTTPS certs and forward traffic to each Open edX instance's Caddy
@@ -32,3 +33,4 @@ spec:
     - {{ host -}}
     {% endfor %}
     secretName: central-lb-ingress-tls
+{%- endif %}

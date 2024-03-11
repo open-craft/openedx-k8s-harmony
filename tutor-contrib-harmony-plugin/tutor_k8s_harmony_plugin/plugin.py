@@ -15,6 +15,7 @@ config = {
         # you with a central load balancer. The standard Ingress object uses annotations to
         # trigger the generation of certificates using cert-manager.
         # See: https://cert-manager.io/docs/usage/ingress/#supported-annotations
+        "ENABLE_INGRESS": True,
         "INGRESS_CLASS_NAME": "nginx",
         # Currently there is no easy way to autodiscover a list of public hosts of your
         # Open edX installation to add to your ingress routes. This especially evident
