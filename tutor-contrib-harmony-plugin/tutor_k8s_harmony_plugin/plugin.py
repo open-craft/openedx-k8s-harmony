@@ -38,6 +38,8 @@ config = {
         "ADDITIONAL_INGRESS_HOST_LIST": [],
         "ENABLE_SHARED_SEARCH_CLUSTER": False,
         "DEPLOYMENT_REVISION_HISTORY_LIMIT": 10,
+        # Disable the per-namespace elasticsearch instance
+        "RUN_ELASTICSEARCH": False,
     },
     "overrides": {
         # Don't use Caddy as a per-instance external web proxy, but do still use it
