@@ -120,6 +120,7 @@ resource "aws_security_group" "rds_security_group" {
 resource "aws_db_instance" "rds_instance" {
   lifecycle {
     ignore_changes = [
+      identifier,
       final_snapshot_identifier,
     ]
   }
